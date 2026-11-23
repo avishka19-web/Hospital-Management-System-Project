@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our doctors · Meridian General Hospital</title>
+  <meta name="description" content="Search and filter Meridian General Hospital's specialist doctors and book an appointment online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main">
+<section class="page-banner"><div class="container"><h1>Find a doctor</h1><p>Search by name or speciality, filter by department or the day you want to visit, then book online.</p></div></section>
+<section class="section" style="padding-top:36px"><div class="container">
+  <form class="filters" id="filters" onsubmit="return false">
+    <div class="input-icon"><i class="fa-solid fa-magnifying-glass"></i><input class="input" id="search" type="search" placeholder="Search by name or speciality" aria-label="Search doctors"></div>
+    <select class="input" id="department" aria-label="Department"><option value="">All departments</option></select>
+    <select class="input" id="day" aria-label="Available day"><option value="">Any day</option><option value="1">Monday</option><option value="2">Tuesday</option><option value="3">Wednesday</option><option value="4">Thursday</option><option value="5">Friday</option><option value="6">Saturday</option><option value="0">Sunday</option></select>
+    <select class="input" id="sort" aria-label="Sort"><option value="name">Name (A-Z)</option><option value="experience">Most experienced</option><option value="fee">Fee: low to high</option><option value="-fee">Fee: high to low</option></select>
+  </form>
+  <p class="muted small" id="count" aria-live="polite"></p>
+  <div class="grid-4" id="list"></div>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="js/config.js"></script><script src="js/images.js"></script><script src="js/ui.js"></script><script src="js/api.js"></script><script src="js/public.js"></script><script src="js/cards.js"></script>
+<script src="js/pages/doctors.js"></script>
+</body>
+</html>

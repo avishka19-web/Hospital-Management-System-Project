@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in · Meridian General Hospital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<div class="auth">
+  <aside class="auth-side">
+    <a class="brand" href="index.html"><span class="brand-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6V3z" fill="#fff"/></svg></span><span>Meridian<small>General Hospital</small></span></a>
+    <img data-img="loginSide" alt="">
+    <div><h2>Care that starts with a simple sign-in.</h2><p>Book appointments, review prescriptions and manage your hospital records in one secure place.</p></div>
+  </aside>
+  <main class="auth-main">
+    <div class="auth-card">
+      <h1>Welcome back</h1>
+      <p class="muted" style="margin-bottom:22px">Log in to your Meridian account.</p>
+      <div id="expired" class="notice warn hidden" style="margin-bottom:16px">Your session has expired. Please log in again.</div>
+      <form id="loginForm" novalidate>
+        <div class="field"><label for="email">Email</label><div class="input-icon"><i class="fa-regular fa-envelope"></i><input class="input" id="email" name="email" type="email" autocomplete="username" required placeholder="you@example.com"></div></div>
+        <div class="field"><label for="password">Password</label><div class="pw-wrap"><input class="input" id="password" name="password" type="password" autocomplete="current-password" required placeholder="Your password"><button type="button" id="togglePw" aria-label="Show password"><i class="fa-regular fa-eye"></i></button></div></div>
+        <div class="flex between items-center" style="margin-bottom:18px"><label class="flex items-center" style="gap:8px;font-size:14px"><input type="checkbox" id="remember"> Remember me</label><a href="#" id="forgot">Forgot password?</a></div>
+        <button class="btn btn-primary btn-block btn-lg" type="submit">Log in</button>
+      </form>
+      <p class="center muted" style="margin:18px 0 0">New patient? <a href="register.html">Create an account</a></p>
+      <div class="demo-box"><b class="small">Demo accounts (synthetic data)</b><div class="row">
+        <button class="btn btn-outline btn-sm" data-demo="admin@meridian.test|Admin@123"><i class="fa-solid fa-user-shield"></i> Admin</button>
+        <button class="btn btn-outline btn-sm" data-demo="doctor@meridian.test|Doctor@123"><i class="fa-solid fa-user-doctor"></i> Doctor</button>
+        <button class="btn btn-outline btn-sm" data-demo="patient@meridian.test|Patient@123"><i class="fa-solid fa-user"></i> Patient</button></div>
+        <p class="hint" style="margin:8px 0 0">Click a role to fill the form, then log in. Run <code>npm run seed</code> first if these fail.</p></div>
+    </div>
+  </main>
+</div>
+<script src="js/config.js"></script><script src="js/images.js"></script><script src="js/ui.js"></script><script src="js/api.js"></script><script src="js/public.js"></script>
+<script src="js/pages/login.js"></script></body></html>
